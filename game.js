@@ -57,23 +57,30 @@ function playRound(playerSelection,computerSelection){
 }
 // function for a game. This will call single round function to play a 5 round 
 // game that keeps score and reports a winner or loser at the end.
-function game() {
-    computer = 0;
-    player = 0;
-    for(let i = 0; i <5; i++){
-        let playerSelection = prompt("Enter your choice - Rock, Paper or Scissors");
-        playerSelection = playerSelection.toUpperCase();
-        let computerSelection = cumputerPlay();
-        console.log(playRound(playerSelection,computerSelection));
-    }
-    if (player > computer){
-        console.log("You win the game!");
-    }
-    else if (computer>player){
-        console.log("Computer Wins :(");
-    }
-    else {
-        confirm.log("Game ends in a draw! What a waste...")
-    }
-}
-game();
+// function game() {
+//     computer = 0;
+//     player = 0;
+//     for(let i = 0; i <5; i++){
+//         let playerSelection = prompt("Enter your choice - Rock, Paper or Scissors");
+//         playerSelection = playerSelection.toUpperCase();
+//         let computerSelection = cumputerPlay();
+//         console.log(playRound(playerSelection,computerSelection));
+//     }
+//     if (player > computer){
+//         console.log("You win the game!");
+//     }
+//     else if (computer>player){
+//         console.log("Computer Wins :(");
+//     }
+//     else {
+//         confirm.log("Game ends in a draw! What a waste...")
+//     }
+// }
+
+//game();
+const btn = document.querySelectorAll('button');
+btn.forEach((button) => {
+    button.addEventListener('click',()=>{
+    console.log(button.id);
+   }); 
+});
