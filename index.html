@@ -6,10 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src = "game.js" defer></script>
+    <link rel= "stylesheet" href="stylesheet.css"/>
 </head>
 <body>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
+    <div class="header">
+        <h1>ROCK PAPER SCISSORS</h1>
+        <p>You vs Computer. <br>First to win 5 rounds is the winner!</p>
+    </div>
+    <div class="container">
+        <h3>Make a choice.</h3>
+        <div class="gameplay">
+            <div class="buttons">
+                <button id="rock">Rock</button>
+                <button id="paper">Paper</button>
+                <button id="scissors">Scissors</button>
+            </div> 
+            <br>
+            <div class="comp">Computer: <div class="comp-turn"></div></div>
+        </div>
+        <div class="round"></div> 
+        <br>
+        <div class="score"></div>  
+        <br>  
+        <div class="result"></div> 
+    </div>  
 </body>
 </html>

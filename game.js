@@ -55,32 +55,33 @@ function playRound(playerSelection,computerSelection){
         return "Your input is incorrect!";
     }
 }
-// function for a game. This will call single round function to play a 5 round 
-// game that keeps score and reports a winner or loser at the end.
-// function game() {
-//     computer = 0;
-//     player = 0;
-//     for(let i = 0; i <5; i++){
-//         let playerSelection = prompt("Enter your choice - Rock, Paper or Scissors");
-//         playerSelection = playerSelection.toUpperCase();
-//         let computerSelection = cumputerPlay();
-//         console.log(playRound(playerSelection,computerSelection));
-//     }
-//     if (player > computer){
-//         console.log("You win the game!");
-//     }
-//     else if (computer>player){
-//         console.log("Computer Wins :(");
-//     }
-//     else {
-//         confirm.log("Game ends in a draw! What a waste...")
-//     }
-// }
 
-//game();
 const btn = document.querySelectorAll('button');
 btn.forEach((button) => {
     button.addEventListener('click',()=>{
-    console.log(button.id);
-   }); 
+    if (player===5 || computer===5){
+        const result = document.querySelector('.score');
+        if (player>computer){
+            result.textContent = "Player Won!";
+        }
+        else if(computer> player){
+            result.textContent = "Computer Won!";
+        }
+        else result.textContent = "It's a tie!";
+        player = 0;
+        computer = 0;
+        }
+    else{
+        let computerSelection = cumputerPlay();
+        let playerSelection = button.id.toUpperCase();
+        let roundResult = playRound(playerSelection,computerSelection);
+        
+        const comp = document.querySelector('.comp-turn');
+        comp.textContent = computerSelection;
+        const round = document.querySelector('.round');
+        round.textContent = roundResult;
+        const score = document.querySelector('.score');
+        score.textContent = `Player: ${player} Computer: ${computer}`;        
+    }
+    }); 
 });
