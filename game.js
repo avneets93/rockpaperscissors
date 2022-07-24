@@ -64,12 +64,13 @@ btn.forEach((button) => {
         if (player>computer){
             result.textContent = "Player Won!";
         }
-        else if(computer> player){
-            result.textContent = "Computer Won!";
-        }
-        else result.textContent = "It's a tie!";
+        else result.textContent = "Computer Won!";
         player = 0;
         computer = 0;
+        // const container = document.querySelector('.container');
+        // const tryAgain = document.createElement('button');
+        // tryAgain.textContent = 'Try Again?';
+        // container.appendChild(tryAgain);
         }
     else{
         let computerSelection = cumputerPlay();

@@ -23,17 +23,18 @@ body{
     border:2px solid black;
     padding: 24px;
     border-radius: 8px;
+    background-color: black;
 }
 button{
     padding:10px;
     width:80px;
-    border-radius: 8px;
-    
+    border-radius: 8px;    
 }
 .comp{
     border:2px solid black;
     padding: 24px;
     border-radius: 8px;
+    background-color: black;
 }
 .result{
     font-size: 24px;
